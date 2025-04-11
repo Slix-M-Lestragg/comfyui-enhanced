@@ -1,0 +1,11 @@
+[project]
+name = "ComfyUI-Enhanced"
+description = "Advanced custom_nodes for ComfyUI."
+version = "0.1.0"
+license = { text = "MIT License" }
+dependencies = []
+
+[tool.comfy]
+PublisherId = "Slix"
+DisplayName = "subink"
+Icon = ""
