@@ -1,4 +1,3 @@
-```markdown
 # ComfyUI Enhanced Nodes
 
 A collection of enhanced nodes for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) that provide powerful additional functionality to your workflows.
@@ -96,4 +95,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 [MIT License](LICENSE)
-```
