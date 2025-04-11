@@ -1,10 +1,10 @@
 from .nodes.nodes import *
 
 NODE_CLASS_MAPPINGS = {
-    "RangeIterator": RangeIterator
+    "Range Iterator": RangeIterator
     }
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "Range Iterator": "RangeIterator"
+    "Range Iterator": "Range Iterator"
     }
 WEB_DIRECTORY = "./js"
 

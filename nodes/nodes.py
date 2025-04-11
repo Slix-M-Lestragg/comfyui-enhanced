@@ -43,24 +43,24 @@ class RangeIterator:
                  that ComfyUI will use to build the node interface.
         """     
         return {
-        "required": {
-            "custom_values": ("STRING", {"default": "", "multiline": False, 
-                "tooltip": "Enter comma separated number list\n"
-                "(e.g., 1, 1.4, 1.9, 2, 5, 11.1)\n"
-                "leave empty to use 'start' and 'end' parameters."}),  # Custom value list as string
-            "mode": (["cycle", "bounce", "once"], {"default": "cycle"}),  # Iteration mode
-            "start": ("INT", {"default": 0, "min": 0, "max": 100}),  # Starting value for the range
-            "end": ("INT", {"default": 10, "min": 1, "max": 100}),   # Ending value for the range
-            "step": ("INT", {"default": 1, "min": 1, "max": 10}),    # Step size for iterations
-            "reset_counter": ("BOOLEAN", {"default": False})         # Force reset of the counter
-        },
-        "optional": {
-            "value_list": ("LIST",),  # Directly provide a list from another node
-            **ContainsAnyDict()  # Support for dynamic inputs from other nodes
-        },
-        "hidden": {
-            "unique_id": "UNIQUE_ID",  # Node ID used to maintain state between runs
-        }
+            "required": {
+                "mode": (["cycle", "bounce", "once"], {"default": "cycle"}),  # Iteration mode
+                "custom_values": ("STRING", {"default": "", "multiline": False, 
+                    "tooltip": "Enter comma separated number list\n"
+                    "(e.g., 1, 1.4, 1.9, 2, 5, 11.1)\n"
+                    "leave empty to use 'start' and 'end' parameters."}),  # Custom value list as string
+                "start": ("INT", {"default": 0, "min": 0, "max": 100}),  # Starting value for the range
+                "end": ("INT", {"default": 10, "min": 1, "max": 100}),   # Ending value for the range
+                "step": ("INT", {"default": 1, "min": 1, "max": 10}),    # Step size for iterations
+                "reset_counter": ("BOOLEAN", {"default": False}),         # Force reset of the counter
+            },
+            "optional": {
+                "value_list": ("LIST",),  # Directly provide a list from another node
+                **ContainsAnyDict()  # Support for dynamic inputs from other nodes
+            },
+            "hidden": {
+                "unique_id": "UNIQUE_ID",  # Node ID used to maintain state between runs
+            },
         }
 
     # Define node outputs and metadata
